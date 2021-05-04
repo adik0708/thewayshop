@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div style="margin-top: 150px;">
+
+    <h1>{{ category.title }}</h1>
+    {% for outfit in outfits %}
+    <h2><a href="{{ outfit.get_absolute_url }}">{{ outfit.name }}</a></h2>
+    <p>{{ outfit.price }}</p>
+    {% endfor %}
+
+</div>
+
+{% endblock content %}

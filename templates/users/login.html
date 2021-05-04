@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1 style="margin: 150px">You have been successfully registed</h1>
+
+<form style="margin-left: 150px; margin-right: 150px;" method="POST">
+    {% csrf_token %}
+    <fieldset class="form-group">
+        {{ form|crispy }}
+    </fieldset>
+    <button type="submit">Sign in</button>
+</form>
+
+
+{% endblock content %}

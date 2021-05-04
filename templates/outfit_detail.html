@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div style="margin-top: 150px; margin-left: 150px;">
+  <h1>{{ outfit.name }}</h1>
+  <p>{{ outfit.price }}</p>
+  <img src="{{ outfit.image.url }}">
+  <p>{{ outfit.description }}</p>
+
+</div>
+{% endblock content %}

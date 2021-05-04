@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<div class="products" style="margin: 130px;">
+
+    {% for category in categories %}
+    <h1><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></h1>
+
+    {% for outfit in outfits %}
+
+    {% if outfit.category.title == category.title %}
+    <p><a href="{{ outfit.get_absolute_url }}">{{ outfit.name }}</a></p>
+    {{ outfit.price }}
+    {% endif %}
+
+    {% endfor %}
+    {% endfor %}
+</div>
+
+
+{% endblock content %}
+
